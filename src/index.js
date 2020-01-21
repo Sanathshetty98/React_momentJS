@@ -7,18 +7,30 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      name: 'React'
+      name: 'React',
+      time: moment().format(' Do MMMM YYYY, h:mm:ss a')
     };
   }
+  componentDidMount(){
+    setInterval(this.changeTime,1000);
+  }
 
+  changeTime = () => {
+    //if(this.state.time !== undefined || this.state.time !== null){
+      let {time} = this.state
+      time =  moment().format(' Do MMMM YYYY, h:mm:ss a')
+      this.setState({time})
+  }
   render() {
     return (
       <div className="container">
               <h1>Moment.js Example</h1>
-              <p>Current Date: {moment().format(' Do MMMM YYYY, h:mm:ss a')} </p>
+              <p>Current Date: {this.state.time} </p>
       </div>
     );
   }
 }
 
 render(<App />, document.getElementById('root'));
+
+/* If we do not use arrow functions while declaring then we need to bind the function to this */

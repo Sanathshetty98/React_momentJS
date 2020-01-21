@@ -1,10 +1,15 @@
 h1, p {
-  font-family: Lato;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   display: block;
   text-align: left;
-  color: cornflowerblue;
 }
-
+h1{
+  color: #2d5d9c;
+}
+p{
+  font-size: 16px;
+  color: #2a6bbf;
+}
 .container{
   border: 1px solid black;
   padding: 10px;
