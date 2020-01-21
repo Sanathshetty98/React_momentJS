@@ -1,0 +1,15 @@
+h1, p {
+  font-family: Lato;
+  display: block;
+  text-align: left;
+  color: cornflowerblue;
+}
+
+.container{
+  border: 1px solid black;
+  padding: 10px;
+  box-shadow: 5px 10px #888888;
+  position:relative;
+  top: 50%;
+  transform: translate(0%,50%)
+}
