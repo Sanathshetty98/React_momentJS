@@ -11,6 +11,7 @@ class App extends Component {
       time: moment().format(' Do MMMM YYYY, h:mm:ss a')
     };
   }
+
   componentDidMount(){
     setInterval(this.changeTime,1000);
   }
@@ -21,6 +22,7 @@ class App extends Component {
       time =  moment().format(' Do MMMM YYYY, h:mm:ss a')
       this.setState({time})
   }
+
   render() {
     return (
       <div className="container">
@@ -33,4 +35,4 @@ class App extends Component {
 
 render(<App />, document.getElementById('root'));
 
-/* If we do not use arrow functions while declaring then we need to bind the function to this */
+/* If we do not use arrow functions while creating a function then we need to bind the function to this */
